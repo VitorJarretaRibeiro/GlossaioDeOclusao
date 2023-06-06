@@ -135,17 +135,7 @@ class _RecoverScreenState extends State<RecoverScreen> {
             onPressed: () {
               String email = _emailController.text.trim();
 
-              bool auth = _authenticatorRecover.autheticatorRecover(email);
-
-              if(email.isNotEmpty){
-                if(auth){
-                  mensagem('E-mail de recuperação enviado', Color.fromRGBO(25, 191, 195,1), Colors.grey[200]);
-                }else{
-                  mensagem('E-mail não encontrado', Colors.yellow[300], Colors.black87);
-                }
-              }else{
-                mensagem('E-mail não foi informado', Colors.yellow[300], Colors.black87);
-              }
+              UserController().esqueceuSenha(context, email);
             }, 
             title: 'Enviar', 
             imageIcon: Icon(Icons.email_rounded, color: Colors.white,),

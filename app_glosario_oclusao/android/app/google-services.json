@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "513066913406",
+    "project_id": "glossariodeoclusao",
+    "storage_bucket": "glossariodeoclusao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513066913406:android:a0d0df53626ab7903e522f",
+        "android_client_info": {
+          "package_name": "com.example.app_glosario_oclusao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513066913406-r8uopa3pp25gc6k2voci36t8rgrfom4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsulOd6rfknCUHycqYrJa3PG4ToSZ3NlU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513066913406-r8uopa3pp25gc6k2voci36t8rgrfom4h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "513066913406-5rhbd6grub2l1srvt9sq34vl60de9a04.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.testarFireBase"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513066913406:android:712ffb1d5eb21f2e3e522f",
+        "android_client_info": {
+          "package_name": "com.example.testar_fire_base"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513066913406-r8uopa3pp25gc6k2voci36t8rgrfom4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsulOd6rfknCUHycqYrJa3PG4ToSZ3NlU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513066913406-r8uopa3pp25gc6k2voci36t8rgrfom4h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "513066913406-5rhbd6grub2l1srvt9sq34vl60de9a04.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.testarFireBase"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

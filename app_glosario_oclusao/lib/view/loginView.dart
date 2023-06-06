@@ -154,16 +154,10 @@ class _loginScreenState extends State<loginScreen> {
                 String email = _emailController.text.trim();
                 String password = _passwordController.text.trim();
 
-                bool auth = _authenticatorController.autheticatorLogin(email, password);
+                var validad = UserController().validarLogin(context, email, password);
 
-                if(email.isNotEmpty && password.isNotEmpty){
-                  if(auth){
-                    Navigator.of(context).pushNamed('carregar');
-                  }else{
-                    mensagem('E-mail ou senha não encontrados', Colors.yellow[200], Colors.black87);
-                  }
-                }else{
-                  mensagem('E-mail ou senha não informado', Colors.yellow[200], Colors.black87);
+                if(validad == true){
+                  UserController().login(context, email, password);
                 }
               },
               title: 'Login',
@@ -208,8 +202,7 @@ class _loginScreenState extends State<loginScreen> {
           // ------------------------------------------------------------------------------------------------------------------
           CustomButtonLineWidgets(
               onPressed: () {
-                var obj = _authenticatorController.list;
-                Navigator.of(context).pushNamed('t2', arguments: obj);
+                Navigator.of(context).pushNamed('t2');
               },
               title: 'Cadastre-se',
               tip: Alignment.center),

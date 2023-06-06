@@ -1,3 +1,4 @@
+import 'package:app_glosario_oclusao/controller/user_controller.dart';
 import 'package:app_glosario_oclusao/widgets/custom_item_drawer_widgets.dart';
 import 'package:app_glosario_oclusao/widgets/custom_visual_drawer_widgets.dart';
 import 'package:flutter/material.dart';
@@ -189,6 +190,13 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               title: "Sobre",
               tipIcon: Icons.error_outline_outlined),
+          CustomItemDrawerWidgets(
+              onPressed: () {
+                UserController().logout();
+                Navigator.of(context).pushNamed('t0');
+              },
+              title: "Sair",
+              tipIcon: Icons.logout),
         ]),
         body: Column(children: [
             Container(

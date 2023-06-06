@@ -129,8 +129,7 @@ class _singUpScreenState extends State<singUpScreen> {
         ),
         leading: IconButton(
           onPressed: () {
-            obj = _addUserController.list;
-            Navigator.of(context).pushNamed('t0', arguments: obj);
+            Navigator.of(context).pushNamed('t0');
           },
           icon: Icon(Icons.arrow_back_ios),
           color: Colors.white,
@@ -196,7 +195,7 @@ class _singUpScreenState extends State<singUpScreen> {
             SizedBox(
               height: 10,
             ),
-            CustomFielWidgets(
+             CustomFielWidgets(
                 controller: _idStudentController,
                 keyboardType: TextInputType.name,
                 focusNode: _idStudentFocusNode,
@@ -204,7 +203,7 @@ class _singUpScreenState extends State<singUpScreen> {
                 labelText: 'Código de Matrícula'),
             SizedBox(
               height: 10,
-            ),
+            ), 
             CustomFielWidgets(
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
@@ -248,24 +247,12 @@ class _singUpScreenState extends State<singUpScreen> {
               onPressed: () {
                 String name = _nomeController.text.trim();
                 String idStudent= _idStudentController.text.trim();
-                int parseIdStudent = int.parse(idStudent);
+                /*int parseIdStudent = int.parse(idStudent); */
                 String email = _emailController.text.trim();
                 String password = _passwordController.text.trim();
                 String confirmPassword = _confirmPasswordController.text.trim();
 
-                if(name.isNotEmpty && idStudent.isNotEmpty && idStudent.isNotEmpty && email.isNotEmpty && password.isNotEmpty && confirmPassword.isNotEmpty){
-                    if(password != confirmPassword){
-                      mensagem('Senhas não são iguais', Colors.yellow[300], Colors.black87);
-                    }else{
-                      setState(() {
-                        _addUserController.addUser(name, parseIdStudent, email, password);
-                      });
-                      obj = _addUserController.list;
-                      mensagem('Usuário adicionado', Color.fromRGBO(25, 191, 195, 1), Colors.grey[200]);
-                    }
-                }else{
-                  mensagem("Todos os campos são obrigatórios", Colors.yellow[300], Colors.black87);
-                }
+                UserController().criarConta(context, name, email, password, confirmPassword, idStudent );
               },
               title: "Cadastrar",
               imageIcon: Icon(

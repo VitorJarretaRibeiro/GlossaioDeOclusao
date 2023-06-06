@@ -96,8 +96,8 @@ class _AboutScreenState extends State<AboutScreen> {
                     children: [
                       Container(
                           alignment: Alignment.topLeft,
-                          height: 180,
-                          width: 180,
+                          height: 120,
+                          width: 120,
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
@@ -108,7 +108,7 @@ class _AboutScreenState extends State<AboutScreen> {
                             child: Image.asset('lib/images/Jarreta.jpg'),
                           )),
                       SizedBox(
-                        width: 40,
+                        width: 20,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,7 +130,7 @@ class _AboutScreenState extends State<AboutScreen> {
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 color: Colors.black87,
-                                fontSize: 16,
+                                fontSize: 12,
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w300),
                           ),
@@ -142,7 +142,7 @@ class _AboutScreenState extends State<AboutScreen> {
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 color: Colors.black87,
-                                fontSize: 16,
+                                fontSize: 12,
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w300),
                           ),
@@ -154,7 +154,7 @@ class _AboutScreenState extends State<AboutScreen> {
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 color: Colors.black87,
-                                fontSize: 16,
+                                fontSize: 12,
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w300),
                           ),
